@@ -8,7 +8,7 @@ The goal is to be user-friendly while offering all the features that Hummingbot 
 
 # Tutorial + Demo
 
-Coming soon...
+Here's everything you need to know: https://youtu.be/5jaC5fbqK6M
 
 # Features
 
