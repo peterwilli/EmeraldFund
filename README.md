@@ -42,6 +42,7 @@ Here's everything you need to know: https://youtu.be/5jaC5fbqK6M
         volumes:
           - ./credentials.yml:/home/dashboard/credentials.yml
           - ./pages:/home/dashboard/frontend/pages
+          - ./bots:/backend-api/bots
         networks:
             - emqx-bridge
       backend-api:
