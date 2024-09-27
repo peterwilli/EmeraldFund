@@ -60,24 +60,24 @@ Here's everything you need to know: https://youtu.be/5jaC5fbqK6M
           - BROKER_PORT=1883
         networks:
           - emqx-bridge
-        emqx:
-          container_name: hummingbot-broker
-          image: emqx:5
-          restart: unless-stopped
-          environment:
-            - EMQX_NAME=emqx
-            - EMQX_HOST=node1.emqx.local
-            - EMQX_CLUSTER__DISCOVERY_STRATEGY=static
-            - EMQX_CLUSTER__STATIC__SEEDS=[emqx@node1.emqx.local]
-            - EMQX_LOADED_PLUGINS="emqx_recon,emqx_retainer,emqx_management,emqx_dashboard"
-          volumes:
-            - emqx-data:/opt/emqx/data
-            - emqx-log:/opt/emqx/log
-            - emqx-etc:/opt/emqx/etc
-          ports:
-            - "1883:1883"  # mqtt:tcp
-            - "8883:8883"  # mqtt:tcp:ssl
-            - "8083:8083"  # mqtt:ws
+      emqx:
+        container_name: hummingbot-broker
+        image: emqx:5
+        restart: unless-stopped
+        environment:
+          - EMQX_NAME=emqx
+          - EMQX_HOST=node1.emqx.local
+          - EMQX_CLUSTER__DISCOVERY_STRATEGY=static
+          - EMQX_CLUSTER__STATIC__SEEDS=[emqx@node1.emqx.local]
+          - EMQX_LOADED_PLUGINS="emqx_recon,emqx_retainer,emqx_management,emqx_dashboard"
+        volumes:
+          - emqx-data:/opt/emqx/data
+          - emqx-log:/opt/emqx/log
+          - emqx-etc:/opt/emqx/etc
+        ports:
+          - "1883:1883"  # mqtt:tcp
+          - "8883:8883"  # mqtt:tcp:ssl
+          - "8083:8083"  # mqtt:ws
           - "8084:8084"  # mqtt:ws:ssl
           - "8081:8081"  # http:management
           - "18083:18083"  # http:dashboard
@@ -100,10 +100,10 @@ Here's everything you need to know: https://youtu.be/5jaC5fbqK6M
       emqx-data: { }
       emqx-log: { }
       emqx-etc: { }
-      ```
+    ```
   </details>
 
-- Add the following to permissions.py in your `deploy/pages` folder between the brackets inside `def public_pages()`:
+- Add the following to `permissions.py` in your `deploy/pages` folder between the brackets inside `def public_pages()`:
   ```py
   Section("Emerald Fund", "💚"),
   Page("frontend/pages/config/emeraldfund/app_pmm.py", "PMM", "💚"),
