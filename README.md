@@ -155,7 +155,7 @@ Here's everything you need to know: https://youtu.be/5jaC5fbqK6M
   ```
   </details>
 
-- Restart Hummingbot Deploy, and the emerald fund should be in your dashboard now!
+- Run `docker compose up -d` to recreate the containers with the updated configuration, and the emerald fund should be in your dashboard now!
 - You can play with some [examples from here](example_strategies/). When pasting examples, make sure to hit ctrl+enter (cmd+enter on Mac) to load the new code!
 - Last but not least - Have fun! And if you make money, remember, think of how many people you can help with your gains, rather than how many sports cars you can buy. Trust me, its much more fulfilling!
 
