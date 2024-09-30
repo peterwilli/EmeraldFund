@@ -29,6 +29,19 @@ Here's everything you need to know: https://youtu.be/5jaC5fbqK6M
 - You can play with some [examples from here](example_strategies/). When pasting examples, make sure to hit ctrl+enter (cmd+enter on Mac) to load the new code!
 - Last but not least - Have fun! And if you make money, remember, think of how many people you can help with your gains, rather than how many sports cars you can buy. Trust me, its much more fulfilling!
 
+# Changelog 🏗
+
+## 2024-09-30
+
+![Screenshot showing changes below](resources/2024_09_30_scr.png)
+1. Lock variables during optimization! If you have risk preferences you wish not to change, you can lock those here.
+2. Multi-objective: You can now customize where to optimize your strategy for, with speed being a third objective you can now use!
+3. Add current config to study: Lets say you wish to use your optimized strategy on a new trading pair. With this feature, you can push the config to the same pipeline as the rest of the trials. This way, you may have a headstart if you do this with a highly optimized strategy but with some small changes, such as a different trading pair.
+
+## 2024-09-29
+
+1. Huge speed boost, nearly 10x faster on optimization with sections!
+
 # Coming soon 👀
 
 - Full-AI assistant: Assist in creation, optimization, and backtesting, as well as correct mistakes and propose updated strategies based on findings during backtesting
